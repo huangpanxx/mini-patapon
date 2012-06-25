@@ -1,6 +1,7 @@
 package game.minipatapon.stage.midground;
 
 import game.minipatapon.datasource.assets.ResourceLoader;
+import game.minipatapon.datasource.assets.TextureAssets;
 import game.minipatapon.effectpresent.action.FlatImage;
 import game.minipatapon.effectpresent.animation.AnimateImage;
 import game.minipatapon.screen.ContentScreen;
@@ -127,10 +128,8 @@ public class MainMenuStage  extends BaseStage implements ActorLoader {
 	
 	private void loadStandardBearer_left_Img()
 	{
-		ArrayList<String> picNames = new ArrayList<String>();
-		picNames.add( "standard-bearer-left-1" );
-		picNames.add( "standard-bearer-left-2" );
-		ArrayList<TextureRegion> regions = ResourceLoader.loadTextureRegionFromPacker("MainMenuPack", picNames);
+		ArrayList<String> picNames = TextureAssets.StandardBearer_left_Img;
+		ArrayList<TextureRegion> regions = TextureAssets.GetTextureRegionFromPacker(picNames);
 		
 		this.standardBearer_left_Img = new AnimateImage(regions, -100f, 0f, this,  0.5f);
 		
@@ -147,10 +146,8 @@ public class MainMenuStage  extends BaseStage implements ActorLoader {
 	
 	private void loadArcher_left_Img()
 	{
-		ArrayList<String> picNames = new ArrayList<String>();
-		picNames.add( "Archer-1" );
-		picNames.add( "Archer-2" );
-		ArrayList<TextureRegion> regions = ResourceLoader.loadTextureRegionFromPacker("MainMenuPack", picNames);
+		ArrayList<String> picNames = TextureAssets.Archer_left_Img;
+		ArrayList<TextureRegion> regions = TextureAssets.GetTextureRegionFromPacker(picNames);
 		
 		this.archer_left_Img = new AnimateImage(regions, -100f, 0f, this,  0.5f);
 		
@@ -166,12 +163,9 @@ public class MainMenuStage  extends BaseStage implements ActorLoader {
 	
 	private void loadShieldSoldier_left_Img()
 	{
-		ArrayList<String> picNames = new ArrayList<String>();
+		ArrayList<String> picNames = TextureAssets.ShieldSoldier_left_Img;
 		
-		picNames.add( "ShieldSoldier2-1" );
-		picNames.add( "ShieldSoldier2-2" );
-		
-		ArrayList<TextureRegion> regions = ResourceLoader.loadTextureRegionFromPacker("MainMenuPack", picNames);
+		ArrayList<TextureRegion> regions = TextureAssets.GetTextureRegionFromPacker(picNames);
 		
 		this.shieldSoldier_left_Img = new AnimateImage(regions, -100f, 0f, this,  0.5f);
 		
@@ -185,12 +179,9 @@ public class MainMenuStage  extends BaseStage implements ActorLoader {
 	
 	private void loadShieldSoldier3_left_Img()
 	{
-		ArrayList<String> picNames = new ArrayList<String>();
+		ArrayList<String> picNames =TextureAssets.ShieldSoldier3_left_Img;
 		
-		picNames.add( "ShieldSoldier3-1" );
-		picNames.add( "ShieldSoldier3-2" );
-		
-		ArrayList<TextureRegion> regions = ResourceLoader.loadTextureRegionFromPacker("MainMenuPack", picNames);
+		ArrayList<TextureRegion> regions = TextureAssets.GetTextureRegionFromPacker(picNames);
 			
 		this.shieldSoldier3_left_Img = new AnimateImage(regions, -100f, 0f, this,  0.5f);
 		
@@ -204,10 +195,8 @@ public class MainMenuStage  extends BaseStage implements ActorLoader {
 	
 	private void loadStandardBearer_right_Img()
 	{
-		ArrayList<String> picNames = new ArrayList<String>();
-		picNames.add( "standard-bearer-right-1" );
-		picNames.add( "standard-bearer-right-2" );
-		ArrayList<TextureRegion> regions = ResourceLoader.loadTextureRegionFromPacker("MainMenuPack", picNames);
+		ArrayList<String> picNames = TextureAssets.StandardBearer_right_Img;
+		ArrayList<TextureRegion> regions = TextureAssets.GetTextureRegionFromPacker(picNames);
 		
 		this.standardBearer_right_Img = new AnimateImage(regions, Gdx.graphics.getWidth(), 0f, this,  0.5f);
 		
@@ -223,10 +212,8 @@ public class MainMenuStage  extends BaseStage implements ActorLoader {
 	
 	private void loadShieldSoldier_right_Img()
 	{
-		ArrayList<String> picNames = new ArrayList<String>();
-		picNames.add( "ShieldSoldier-1" );
-		picNames.add( "ShieldSoldier-2" );
-		ArrayList<TextureRegion> regions = ResourceLoader.loadTextureRegionFromPacker("MainMenuPack", picNames);
+		ArrayList<String> picNames = TextureAssets.ShieldSoldier_left_Img;
+		ArrayList<TextureRegion> regions = TextureAssets.GetTextureRegionFromPacker(picNames);
 		
 		this.shieldSoldier_right_Img = new AnimateImage(regions, Gdx.graphics.getWidth(), 0f, this,  0.5f);
 		
@@ -243,10 +230,8 @@ public class MainMenuStage  extends BaseStage implements ActorLoader {
 	
 	private void loadSwordman_right_Img()
 	{
-		ArrayList<String> picNames = new ArrayList<String>();
-		picNames.add( "swordman-1" );
-		picNames.add( "swordman-2" );
-		ArrayList<TextureRegion> regions = ResourceLoader.loadTextureRegionFromPacker("MainMenuPack", picNames);
+		ArrayList<String> picNames = TextureAssets.Swordman_right_Img;
+		ArrayList<TextureRegion> regions = TextureAssets.GetTextureRegionFromPacker(picNames);
 		
 		this.swordman_right_Img = new AnimateImage(regions, Gdx.graphics.getWidth(), 0f, this,  0.5f);
 		
@@ -261,10 +246,8 @@ public class MainMenuStage  extends BaseStage implements ActorLoader {
 	
 	private void loadSwordman2_right_Img()
 	{
-		ArrayList<String> picNames = new ArrayList<String>();
-		picNames.add( "swordman2-1" );
-		picNames.add( "swordman2-2" );
-		ArrayList<TextureRegion> regions = ResourceLoader.loadTextureRegionFromPacker("MainMenuPack", picNames);
+		ArrayList<String> picNames = TextureAssets.Swordman2_right_Img;
+		ArrayList<TextureRegion> regions = TextureAssets.GetTextureRegionFromPacker(picNames);
 		
 		this.swordman2_right_Img = new AnimateImage(regions, Gdx.graphics.getWidth(), 0f, this,  0.5f);
 		
@@ -283,7 +266,7 @@ public class MainMenuStage  extends BaseStage implements ActorLoader {
 	private void loadAltarImg()
 	{
 		
-		Texture maskTexture = ResourceLoader.loadTexture("altar.png");
+		Texture maskTexture =TextureAssets.GetTex(TextureAssets.Altar_Img);
 		this.altarImg = new FlatImage(maskTexture, 0, -100f, this);
 		
 //		
@@ -296,10 +279,8 @@ public class MainMenuStage  extends BaseStage implements ActorLoader {
 	
 	private void loadGameName1Img()
 	{
-		ArrayList<String> picNames = new ArrayList<String>();
-		picNames.add( "GameName1" );
 		
-		ArrayList<TextureRegion> regions = ResourceLoader.loadTextureRegionFromPacker("MainMenuPack", picNames);
+		ArrayList<TextureRegion> regions = TextureAssets.GetTextureRegionFromPacker(TextureAssets.GameName1Img);
 				
 		this.gameName1Img = new FlatImage(regions.get(0), Gdx.graphics.getWidth(), Gdx.graphics.getHeight()/2, this);
 		
@@ -310,11 +291,8 @@ public class MainMenuStage  extends BaseStage implements ActorLoader {
 	
 	private void loadGameName2Img()
 	{
-		ArrayList<String> picNames = new ArrayList<String>();
-		picNames.add( "GameName2" );
 		
-		ArrayList<TextureRegion> regions = ResourceLoader.loadTextureRegionFromPacker("MainMenuPack", picNames);				
-				
+		ArrayList<TextureRegion> regions = TextureAssets.GetTextureRegionFromPacker(TextureAssets.GameName2Img);
 		this.gameName2Img = new FlatImage(regions.get(0), Gdx.graphics.getWidth(), Gdx.graphics.getHeight()/2, this);
 		
 		this.gameName2Img.scaleX = 0.5f;

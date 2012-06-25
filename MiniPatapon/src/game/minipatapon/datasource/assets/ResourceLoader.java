@@ -16,34 +16,34 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 public class ResourceLoader {
 
-	private static final String TEXTURE_DIR = "data/images";
-	private static final String DEFAULT_TEXTURE_NAME = "default.png";
+	public static final String TEXTURE_DIR = "data/images";
+	public static final String DEFAULT_TEXTURE_NAME = "default.png";
 
-	private static final String SOUND_DIR = "data/sounds";
-	private static final String DEFAULT_SOUND_NAME = "default.ogg";
+	public static final String SOUND_DIR = "data/sounds";
+	public static final String DEFAULT_SOUND_NAME = "default.ogg";
 
-	private static final String MUSIC_DIR = "data/musics";
-	private static final String DEFAULT_MUSIC_NAME = "default.ogg";
+	public static final String MUSIC_DIR = "data/musics";
+	public static final String DEFAULT_MUSIC_NAME = "default.ogg";
 
-	private static final String Font_DIR = "data/fonts";
-	private static final String DEFAULT_FONT_FILE = "Segoe.fnt";
-	private static final String DEFAULT_FONT_BITMAP = "Segoe.png";
+	public static final String Font_DIR = "data/fonts";
+	public static final String DEFAULT_FONT_FILE = "Segoe.fnt";
+	public static final String DEFAULT_FONT_BITMAP = "Segoe.png";
 
-	private static final String PARTICLE_DIR = "data/particles";
-	private static final String DEFAULT_PARTICLE_FILE = "default.p";
-	private static final String DEFAULT_PARTICLE_DIR = "";
+	public static final String PARTICLE_DIR = "data/particles";
+	public static final String DEFAULT_PARTICLE_FILE = "default.p";
+	public static final String DEFAULT_PARTICLE_DIR = "";
 
-	private static final String MAP_DIR = "data/maps";
+	public static final String MAP_DIR = "data/maps";
 	
-	private static final String MAP_DICTIONARY_FILE = "index.json";
+	public static final String MAP_DICTIONARY_FILE = "index.json";
 
 	private static TextureLoader textureLoader = null;
 	private static SoundLoader soundLoader = null;
 	private static MusicLoader musicLoader = null;
 	private static FontLoader fontLoader = null;
 	private static ParticleLoader particleLoader = null;
-	//private static MapLoader worldLoader = null;
-	//private static GateLoader gateLoader = null;
+//	private static MapLoader worldLoader = null;
+//	private static GateLoader gateLoader = null;
 	
 	
 //	public static ArrayList<Image> loadImageFromPacker( String packerName, ArrayList<String> picNames, float scaleWidth=1, float scaleHeight=1)
@@ -63,13 +63,13 @@ public class ResourceLoader {
 //	}
 	
 	
-	public static ArrayList<TextureRegion> loadTextureRegionFromPacker( String packerName, ArrayList<String> picNames)
+	public static ArrayList<TextureRegion> loadTextureRegionFromPacker( ArrayList<String> picNames)
 	{
 		ArrayList<TextureRegion> regions = new ArrayList<TextureRegion>();
 		
-		TextureAtlas atlas=new TextureAtlas(Gdx.files.internal("data/images/" + packerName)); 
+		TextureAtlas atlas=new TextureAtlas(Gdx.files.internal("data/images/" + picNames.get(0))); 
 		
-		for( int i=0; i<picNames.size(); i++ )
+		for( int i=1; i<picNames.size(); i++ )
 		{
 			regions.add( atlas.findRegion( picNames.get(i) ) );
 		}

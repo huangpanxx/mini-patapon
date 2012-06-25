@@ -2,6 +2,9 @@ package game.minipatapon.stage.background;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.actors.Image;
+
+import game.minipatapon.datasource.assets.TextureAssets;
+import game.minipatapon.effectpresent.background.ParaBackgroundMainMenu;
 import game.minipatapon.event.EventAggregator;
 import game.minipatapon.event.EventListener;
 import game.minipatapon.logger.DefaultLogger;
@@ -44,7 +47,7 @@ public class BackgroundStage extends BaseStage  {
 	@Override
 	public void show() {
 		// TODO Auto-generated method stub
-		
+		//render();
 	}
 
 	/*Loggable logger = null;
@@ -55,8 +58,12 @@ public class BackgroundStage extends BaseStage  {
 	*/public BackgroundStage(NavigateScreen _screen, float width, float height,
 			boolean stretch) {
 		super(width, height, stretch);
+		//ParaBackgroundMainMenu.GetInstance();
 		
-		
+	}
+	public void draw()
+	{
+		ParaBackgroundMainMenu.GetInstance().render();
 	}
 /*
 	private void loadBackground(String name) {

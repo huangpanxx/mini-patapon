@@ -12,4 +12,5 @@ public class BackgroundScreen extends NavigateScreen {
 		super.show();
 		this.navigate(new BackgroundStage(this, getWidth(), getHeight(), false));
 	}
+
 }
