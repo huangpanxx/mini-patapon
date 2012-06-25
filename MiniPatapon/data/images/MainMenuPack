@@ -1,0 +1,138 @@
+
+MainMenuPics1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+БъЬт
+  rotate: false
+  xy: 2, 2
+  size: 500, 200
+  orig: 500, 200
+  offset: 0, 0
+  index: -1
+GameName2
+  rotate: false
+  xy: 2, 204
+  size: 283, 95
+  orig: 283, 95
+  offset: 0, 0
+  index: -1
+swordman-2
+  rotate: false
+  xy: 2, 301
+  size: 180, 135
+  orig: 180, 135
+  offset: 0, 0
+  index: -1
+swordman-1
+  rotate: false
+  xy: 184, 301
+  size: 180, 135
+  orig: 180, 135
+  offset: 0, 0
+  index: -1
+swordman2-2
+  rotate: false
+  xy: 2, 438
+  size: 151, 139
+  orig: 151, 139
+  offset: 0, 0
+  index: -1
+ShieldSoldier2-2
+  rotate: false
+  xy: 366, 301
+  size: 135, 135
+  orig: 135, 135
+  offset: 0, 0
+  index: -1
+ShieldSoldier-2
+  rotate: false
+  xy: 155, 438
+  size: 135, 135
+  orig: 135, 135
+  offset: 0, 0
+  index: -1
+standard-bearer-left-2
+  rotate: false
+  xy: 2, 579
+  size: 133, 236
+  orig: 133, 236
+  offset: 0, 0
+  index: -1
+standard-bearer-left-1
+  rotate: false
+  xy: 137, 579
+  size: 133, 236
+  orig: 133, 236
+  offset: 0, 0
+  index: -1
+ShieldSoldier3-2
+  rotate: false
+  xy: 292, 438
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+ShieldSoldier3-1
+  rotate: false
+  xy: 2, 817
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+ShieldSoldier2-1
+  rotate: false
+  xy: 137, 817
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+ShieldSoldier-1
+  rotate: false
+  xy: 272, 579
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+GameName1
+  rotate: false
+  xy: 287, 204
+  size: 121, 95
+  orig: 121, 95
+  offset: 0, 0
+  index: -1
+Archer-2
+  rotate: false
+  xy: 410, 204
+  size: 90, 85
+  orig: 90, 85
+  offset: 0, 0
+  index: -1
+Archer-1
+  rotate: false
+  xy: 402, 579
+  size: 90, 85
+  orig: 90, 85
+  offset: 0, 0
+  index: -1
+standard-bearer-right-2
+  rotate: false
+  xy: 272, 709
+  size: 77, 233
+  orig: 77, 233
+  offset: 0, 0
+  index: -1
+standard-bearer-right-1
+  rotate: false
+  xy: 351, 709
+  size: 77, 233
+  orig: 77, 233
+  offset: 0, 0
+  index: -1
+swordman2-1
+  rotate: false
+  xy: 422, 438
+  size: 60, 139
+  orig: 60, 139
+  offset: 0, 0
+  index: -1
