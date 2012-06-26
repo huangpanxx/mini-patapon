@@ -1,5 +1,7 @@
 package game.minipatapon.effectpresent.texurefliter;
 
+import java.util.ArrayList;
+
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.Texture.TextureFilter;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
@@ -11,10 +13,13 @@ public class TextureHandle {
 	}
     public static void TextureFilterLinear(TextureRegion x)
     {
-    	x.getTexture().setFilter(TextureFilter.Linear, TextureFilter.Linear);
+    	TextureFilterLinear(x.getTexture());
     }
-    public static void TextureFilter(Texture x)
+    public static void TextureFilterLinear(ArrayList<TextureRegion> textureRegions)
     {
-    	x.setFilter(TextureFilter.MipMapLinearLinear, TextureFilter.MipMap);
+    	for (TextureRegion textureRegion : textureRegions) {
+			TextureFilterLinear(textureRegion);
+		}
     }
+
 }
