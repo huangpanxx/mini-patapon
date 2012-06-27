@@ -3,7 +3,6 @@ package game.minipatapon.effectpresent.background;
 //import javax.xml.soap.Text;
 
 import com.badlogic.gdx.Gdx; 
-import com.badlogic.gdx.graphics.GL10; 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.Texture.TextureFilter;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
@@ -11,7 +10,7 @@ import com.badlogic.gdx.math.Vector2;
 public class ParaBackgroundMainMenu {
  
     //protected OrthographicCamera camera; 
-    //protected Box2DDebugRenderer renderer; // ²âÊÔÓÃ»æÖÆÆ÷ 
+    //protected Box2DDebugRenderer renderer; // ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ 
     //private World world;
     //int count=0;
 	static private ParaBackgroundMainMenu m_background =null;

@@ -1,14 +1,9 @@
 package game.minipatapon.stage.background;
 
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.scenes.scene2d.actors.Image;
 
-import game.minipatapon.datasource.assets.TextureAssets;
+
 import game.minipatapon.effectpresent.background.ParaBackgroundMainMenu;
-import game.minipatapon.event.EventAggregator;
-import game.minipatapon.event.EventListener;
-import game.minipatapon.logger.DefaultLogger;
-import game.minipatapon.logger.Loggable;
+
 import game.minipatapon.screen.NavigateScreen;
 //import game.minipatapon.service.ResourceLoader;
 import game.minipatapon.stage.base.BaseStage;
@@ -67,7 +62,7 @@ public class BackgroundStage extends BaseStage  {
 	}
 /*
 	private void loadBackground(String name) {
-		//�?��是否重复设置
+		//�?��是否重复设置
 		if (this.backgroundImage != null) {
 			if (this.backgroundImageName.equals(name)) {
 				return;
@@ -76,13 +71,13 @@ public class BackgroundStage extends BaseStage  {
 		//加载
 		Texture texture ;//= ResourceLoader.loadTexture(name);
 		
-		//若成功加载纹理则移除旧背�?
+		//若成功加载纹理则移除旧背�?
 		if (backgroundImage != null) {
 			this.removeActor(backgroundImage);
 			backgroundImage = null;
 		}
 		
-		//加载成功后更新最近背景名�?
+		//加载成功后更新最近背景名�?
 		this.backgroundImageName = name;
 		
 		//创建新的背景

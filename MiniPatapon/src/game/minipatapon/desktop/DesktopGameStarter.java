@@ -9,14 +9,14 @@ package game.minipatapon.desktop;
 import com.badlogic.gdx.backends.jogl.JoglApplication;
 //import game.minipatapon.application.EggSnakeManager;
 import game.minipatapon.application.MiniPataponManager;
-import game.minipatapon.logger.ConsoleLogger;
+
 import game.minipatapon.logger.DefaultLogger;
 import game.minipatapon.logger.Loggable;
 import game.minipatapon.logger.WatcherLogger;
 
 public class DesktopGameStarter {
 	/**
-	 * 桌面程序启动�?
+	 * 桌面程序启动�?
 	 * 
 	 * @param args
 	 * @throws Exception
@@ -32,9 +32,9 @@ public class DesktopGameStarter {
 		logger.logWithSignature("DesktopStarter", "Enter from desktop");
 
 		try {
-			// 获得管理�?
+			// 获得管理�?
 			MiniPataponManager manager = MiniPataponManager.getInstance();
-			// 启动管理�?
+			// 启动管理�?
 			new JoglApplication(manager, "MiniPatapon", 480, 320, true);
 		} catch (Exception e) {
 			logger.logWithSignature("DesktopStarter", 1, "程序运行出错:%1$s",
