@@ -15,8 +15,8 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 public class TextureAssets {
 	//public static ArrayList<String> ;
 	
-	private static Map<String , Texture> m_texMap = new HashMap<String, Texture>();
-	private static Map<ArrayList<String>, ArrayList<TextureRegion>> m_texregionMap = new HashMap<ArrayList<String>, ArrayList<TextureRegion>>(); 
+//	private static Map<String , Texture> m_texMap = new HashMap<String, Texture>();
+//	private static Map<ArrayList<String>, ArrayList<TextureRegion>> m_texregionMap = new HashMap<ArrayList<String>, ArrayList<TextureRegion>>(); 
 	
 	public final static ArrayList<String>  StandardBearer_right_Img = 
 			new ArrayList<String>(){{ add("MainMenuPack");add( "standard-bearer-right-1" );add( "standard-bearer-right-2" );}};
@@ -44,33 +44,34 @@ public class TextureAssets {
 	public static  Texture GetTex(String texStr)
 	{
 		//MusicAssets.GetMusic(MusicAssets.exampleMusicStr);
-		while(!m_texMap.containsKey(texStr))
-		{
-			LoadTexture(texStr);
-		}
-		return m_texMap.get(texStr);
+	//	while(!m_texMap.containsKey(texStr))
+	//	{
+	//		LoadTexture(texStr);
+	//	}
+	//	return m_texMap.get(texStr);
+		return ResourceLoader.loadTexture(texStr);
 	}
 	
 	public static ArrayList<TextureRegion> GetTextureRegionFromPacker(ArrayList<String> str)
 	{
-		while(!m_texregionMap.containsKey(str))
-		{
-			LoadTextureRegion(str);
-		}
-		return m_texregionMap.get(str);
-		
+	//	while(!m_texregionMap.containsKey(str))
+	//	{
+	//		LoadTextureRegion(str);
+	//	}
+	//	return m_texregionMap.get(str);
+		return ResourceLoader.loadTextureRegionFromPacker(str);
 	}
 	
 	public static void LoadTextureRegion(ArrayList<String> str)
 	{
 		ArrayList<TextureRegion> temp =ResourceLoader.loadTextureRegionFromPacker(str);
-		m_texregionMap.put(str, temp);
+//		m_texregionMap.put(str, temp);
 	}
 	
 	public static void LoadTexture(String texStr)
 	{
 		Texture temp=ResourceLoader.loadTexture(texStr);
-		m_texMap.put(texStr, temp);
+	//	m_texMap.put(texStr, temp);
 	}
 	
 	public static void LoadTexture(ArrayList<String> texStrs)
@@ -78,7 +79,7 @@ public class TextureAssets {
 		
 		for (String texStr : texStrs) {
 			Texture temp=ResourceLoader.loadTexture(texStr);
-			m_texMap.put(texStr, temp);
+//			m_texMap.put(texStr, temp);
 		}
 		
 	}

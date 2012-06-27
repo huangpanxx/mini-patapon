@@ -11,22 +11,22 @@ import com.badlogic.gdx.audio.Music;
 public class MusicAssets {
 	public static String exampleMusicStr;
 	
-	private static Map<String , Music> m_musicMap = new HashMap<String, Music>();
+	//private static Map<String , Music> m_musicMap = new HashMap<String, Music>();
 	
 	public static  Music GetMusic(String musicStr)
 	{
 		//MusicAssets.GetMusic(MusicAssets.exampleMusicStr);
-		while(!m_musicMap.containsKey(musicStr))
-		{
-			LoadMusic(musicStr);
-		}
-		return m_musicMap.get(musicStr);
+//		while(!m_musicMap.containsKey(musicStr))
+//		{
+//			LoadMusic(musicStr);
+//		}
+		return ResourceLoader.loadMusic(musicStr);
 	}
 	
 	public static void LoadMusic(String musicStr)
 	{
 		Music temp=ResourceLoader.loadMusic(musicStr);
-		m_musicMap.put(musicStr, temp);
+//		m_musicMap.put(musicStr, temp);
 	}
 	
 	public static void LoadMusic(ArrayList<String> musicStrs)
@@ -34,7 +34,7 @@ public class MusicAssets {
 		
 		for (String musicStr : musicStrs) {
 			Music temp=ResourceLoader.loadMusic(musicStr);
-			m_musicMap.put(musicStr, temp);
+//			m_musicMap.put(musicStr, temp);
 		}
 		
 	}

@@ -9,6 +9,8 @@ import game.minipatapon.stage.base.BaseStage;
 
 import java.util.ArrayList;
 
+import bloom.Bloom;
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
@@ -39,6 +41,7 @@ public class MainMenuStage  extends BaseStage implements ActorLoader {
 	
 	private Image altarImg;                          //祭坛
 	
+	private Bloom bloom;
 	private FlatImage gameName1Img;
 	private FlatImage gameName2Img;
 	
@@ -63,7 +66,7 @@ public class MainMenuStage  extends BaseStage implements ActorLoader {
 		// TODO Auto-generated method stub
 		
 		this.loadAltarImg();
-		
+		bloom =new Bloom();
 		this.loadShieldSoldier3_left_Img();		
 		this.loadShieldSoldier_left_Img();
 		this.loadArcher_left_Img();
@@ -122,8 +125,17 @@ public class MainMenuStage  extends BaseStage implements ActorLoader {
 	@Override
 	public void show() {
 		// TODO Auto-generated method stub
-		
+	
 	}	
+	@Override
+	public void draw()
+	{
+		super.draw();
+	//	bloom.capture();
+	//	bloom.render();
+		
+	}
+	
 	
 	
 	private void loadStandardBearer_left_Img()
