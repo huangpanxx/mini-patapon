@@ -8,7 +8,10 @@ package game.minipatapon.screen;
 
 //import game.minipatapon.stage.midground.MainMenuStage;
 //import game.minipatapon.stage.midground.StartMenuStage;
+import game.minipatapon.stage.midground.ChooseLevelStage;
+import game.minipatapon.stage.midground.MainMenuStage;
 import game.minipatapon.stage.midground.StartAnimationStage;
+import game.minipatapon.stage.midground.TestSpriterImport;
 
 public class ContentScreen extends NavigateScreen {
 
@@ -21,6 +24,8 @@ public class ContentScreen extends NavigateScreen {
 		super.show();
 //		this.navigate(new StartMenuStage(this, getWidth(), getHeight(), true));
 //		this.navigate(new MainMenuStage(this, getWidth(), getHeight(), true));
+//		this.navigate(new ChooseLevelStage(this, getWidth(), getHeight(), true));
 		this.navigate(new StartAnimationStage(this, getWidth(), getHeight(), true));
+//		this.navigate(new TestSpriterImport(this, getWidth(), getHeight(), true));
 	}
 }

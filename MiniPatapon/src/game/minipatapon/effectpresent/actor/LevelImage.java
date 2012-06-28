@@ -15,7 +15,6 @@ public class LevelImage extends FlatImage{
 	public LevelImage(String name, Texture texture, float x, float y, Stage stage ) 
 	{
 		super(name, texture, x, y, stage);
-		
 	}
 	
 }

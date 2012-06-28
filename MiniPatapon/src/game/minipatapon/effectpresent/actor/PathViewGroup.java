@@ -106,7 +106,7 @@ public class PathViewGroup extends Group {
 					items.get(idx).width, items.get(idx).height);
 			
 			if (MathHelper.isRectContainPoint(rect, scenePoint))
-				DefaultLogger.getDefaultLogger().logWithSignature(this, "在第%d个actor按下", idx);
+				DefaultLogger.getDefaultLogger().logWithSignature(this, "鍦ㄧ¬¬%d涓猘ctor鎸変笅", idx);
 				break;
 		}
 
@@ -122,7 +122,7 @@ public class PathViewGroup extends Group {
 		
 		moveChildren( 0f, 0f);
 		
-		DefaultLogger.getDefaultLogger().logWithSignature(this, "按下时间：%f, point：%f, %f", time, x, y);
+		DefaultLogger.getDefaultLogger().logWithSignature(this, "鎸変笅鏃堕棿锛%f, point锛%f, %f", time, x, y);
 
 
 
@@ -151,7 +151,7 @@ public class PathViewGroup extends Group {
 		lastLastMoveTime = lastMoveTime;
 		lastMoveTime = time;
 		
-//		DefaultLogger.getDefaultLogger().logWithSignature(this, "移动时间：%f, point：%f, %f", time, x, y);
+//		DefaultLogger.getDefaultLogger().logWithSignature(this, "绉诲姩鏃堕棿锛%f, point锛%f, %f", time, x, y);
 	}
 	
 	@Override
@@ -159,7 +159,7 @@ public class PathViewGroup extends Group {
 		
 		if( !mouseMove )
 		{
-			//即鼠标没有移动，产生click事件
+			//鍗抽紶鏍囨病鏈夌Щ鍔¨锛屼骇鐢焎lick浜嬩欢
 			
 		}
 		
@@ -201,13 +201,13 @@ public class PathViewGroup extends Group {
 		
 		moveChildren( s,  slideTime, EasingCurveType.OutCubic);
 		
-		//DefaultLogger.getDefaultLogger().logWithSignature(this, "位移：%f, 时间:%f", s, slideTime);
-		DefaultLogger.getDefaultLogger().logWithSignature(this, "速度：%f, 间隔:%f", moveSpeed, moveTime);
+		//DefaultLogger.getDefaultLogger().logWithSignature(this, "浣嶇Щ锛%f, 鏃堕棿:%f", s, slideTime);
+		DefaultLogger.getDefaultLogger().logWithSignature(this, "閫熷害锛%f, 闂撮殧:%f", moveSpeed, moveTime);
 
 		
 		mouseMove = false;
 		
-		DefaultLogger.getDefaultLogger().logWithSignature(this, "放开时间：%f, point：%f, %f", time, x, y);
+		DefaultLogger.getDefaultLogger().logWithSignature(this, "鏀惧紑鏃堕棿锛%f, point锛%f, %f", time, x, y);
 	}
 
 	
@@ -244,7 +244,7 @@ public class PathViewGroup extends Group {
 		super.act(delta);
 		
 		time += delta;
-		//DefaultLogger.getDefaultLogger().logWithSignature(this, "delta为%f", delta);
+		//DefaultLogger.getDefaultLogger().logWithSignature(this, "delta涓º%f", delta);
 	}
 	
 	public void draw (SpriteBatch batch, float parentAlpha) {
@@ -330,7 +330,7 @@ public class PathViewGroup extends Group {
 		if( highLightActor==null && children.size()>0 )
 		{
 			actor = children.get(0);
-			DefaultLogger.getDefaultLogger().logWithSignature(this, "初始话highLightActor为第一个actor");
+			DefaultLogger.getDefaultLogger().logWithSignature(this, "鍒濆§嬭瘽highLightActor涓虹¬¬涓€涓猘ctor");
 		}
 		
 		return actor;

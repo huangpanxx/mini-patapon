@@ -1,5 +1,6 @@
 package game.minipatapon.effectpresent.actor;
 
+
 import com.badlogic.gdx.scenes.scene2d.Group;
 
 public class SynchroGroup extends Group {

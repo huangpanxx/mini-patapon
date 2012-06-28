@@ -1,6 +1,8 @@
 package game.minipatapon.effectpresent.action;
 
 
+import game.minipatapon.logger.DefaultLogger;
+
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 
@@ -17,7 +19,7 @@ public class ActorAccessor implements TweenAccessor<Actor> {
 
 	@Override
 	public int getValues(Actor target, int tweenType, float[] returnValues) {
-		
+		//DefaultLogger.getDefaultLogger().logWithSignature(this, "%d", tweenType);
 		switch (tweenType) {
 		case POS_XY:
 			returnValues[0] = target.x;
@@ -56,7 +58,7 @@ public class ActorAccessor implements TweenAccessor<Actor> {
 
 	@Override
 	public void setValues(Actor target, int tweenType, float[] newValues) {
-//		DefaultLogger.getDefaultLogger().logWithSignature(this, "%d, %f", tweenType, newValues[0]);
+		//DefaultLogger.getDefaultLogger().logWithSignature(this, "%d, %f", tweenType, newValues[0]);
 		switch (tweenType) {
 		case POS_XY:
 			target.x = newValues[0];

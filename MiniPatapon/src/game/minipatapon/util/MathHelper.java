@@ -1,6 +1,7 @@
 package game.minipatapon.util;
 
 
+import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Actor;
@@ -47,5 +48,16 @@ public class MathHelper {
 		float y = (1-t)*(1-t)*(1-t)*startVector.y + 3*t*(1-t)*(1-t)*control1.y + 3*t*t*(1-t)*control2.y + t*t*t*endVector.y;
 		
 		return new Vector2(x, y);
+	}
+	
+	public static float nMultiplication(float x, int n)
+	{
+		float value = 1f;
+		for(int i=0; i<n; i++)
+		{
+			value *= x;
+		}
+		
+		return value;
 	}
 }

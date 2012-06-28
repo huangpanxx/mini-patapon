@@ -19,8 +19,8 @@ import com.badlogic.gdx.scenes.scene2d.actors.Image;
 
 public class MainMenuStage extends BaseStage implements ActorLoader {
 
-	private float scaleX = 0.5f;
-	private float scaleY = 0.5f;
+	private float scaleX = 1f;
+	private float scaleY = 1f;
 
 	private float actorDistance = 5f;
 
@@ -77,6 +77,7 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 		this.loadGameName2Img();
 
 		this.InitAction();
+	
 	}
 
 	//

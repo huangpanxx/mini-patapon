@@ -1,4 +1,3 @@
-
 package game.minipatapon.stage.midground;
 
 import game.minipatapon.datasource.assets.ResourceLoader;

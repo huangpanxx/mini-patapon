@@ -14,11 +14,11 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 public class TextureAssets {
 	// public static ArrayList<String> ;
 
-	private static Map<String, Texture> m_texMap = new HashMap<String, Texture>();
-	private static Map<ArrayList<String>, ArrayList<TextureRegion>> m_texregionMap = new HashMap<ArrayList<String>, ArrayList<TextureRegion>>();
+//	private static Map<String, Texture> m_texMap = new HashMap<String, Texture>();
+//	private static Map<ArrayList<String>, ArrayList<TextureRegion>> m_texregionMap = new HashMap<ArrayList<String>, ArrayList<TextureRegion>>();
 
 	// StatAnimationStage
-	public final static ArrayList<String> UniversalImg = new ArrayList<String>() {
+	public final static ArrayList<String> MiniImg = new ArrayList<String>() {
 		/**
 		 * 
 		 */
@@ -26,11 +26,11 @@ public class TextureAssets {
 
 		{
 			add("StartAnimation/StartAnimationPack");
-			add("universal");
+			add("mini");
 		}
 	};
 
-	public final static ArrayList<String> TweenImg = new ArrayList<String>() {
+	public final static ArrayList<String> PataImg = new ArrayList<String>() {
 		/**
 		 * 
 		 */
@@ -38,11 +38,11 @@ public class TextureAssets {
 
 		{
 			add("StartAnimation/StartAnimationPack");
-			add("tween");
+			add("pata");
 		}
 	};
 
-	public final static ArrayList<String> EngineImg = new ArrayList<String>() {
+	public final static ArrayList<String> PonImg = new ArrayList<String>() {
 		/**
 		 * 
 		 */
@@ -50,7 +50,7 @@ public class TextureAssets {
 
 		{
 			add("StartAnimation/StartAnimationPack");
-			add("engine");
+			add("pon");
 		}
 	};
 
@@ -62,7 +62,7 @@ public class TextureAssets {
 
 		{
 			add("StartAnimation/StartAnimationPack");
-			add("logo");
+			add("logo2");
 		}
 	};
 
@@ -86,7 +86,7 @@ public class TextureAssets {
 
 		{
 			add("StartAnimation/StartAnimationPack");
-			add("powered");
+			add("powerdby");
 		}
 	};
 
@@ -98,7 +98,7 @@ public class TextureAssets {
 
 		{
 			add("StartAnimation/StartAnimationPack");
-			add("gdxblur");
+			add("nuclear-Logo");
 		}
 	};
 
@@ -122,7 +122,7 @@ public class TextureAssets {
 
 		{
 			add("StartAnimation/StartAnimationPack");
-			add("gdx");
+			add("logo");
 		}
 	};
 	
@@ -238,6 +238,12 @@ public class TextureAssets {
 			add("Yaripon4");
 		}
 	};
+	
+	
+	//LevelStage
+	public final static String BackgroundImg = "background.png";
+	
+	
 	public final static ArrayList<String> GameName1Img = new ArrayList<String>() {
 		/**
 		 * 
@@ -289,15 +295,18 @@ public class TextureAssets {
 		return ResourceLoader.loadTexture(texStr);
 	}
 	
+
+	
 	public static TextureRegion GetTextureRegionFromPacker(ArrayList<String> str)
 	{
-	//	while(!m_texregionMap.containsKey(str))
-	//	{
-	//		LoadTextureRegion(str);
-	//	}
-	//	return m_texregionMap.get(str);
+		DefaultLogger.getDefaultLogger().logWithSignature(TextureAssets.class, "资源未加载：%s", str.toString());
+		if( GetTextureRegionsFromPacker(str).size() <=0 )
+		{
+			DefaultLogger.getDefaultLogger().logWithSignature(TextureAssets.class, "资源未加载：%s", str.toString());
+			return null;
+		}
 
-		return GetTextureRegionsFromPacker(str).get(0);
+		return GetTextureRegionsFromPacker(str).get(0) ;
 	}
 	
 	public static void LoadTextureRegion(ArrayList<String> str)

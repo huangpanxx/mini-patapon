@@ -27,15 +27,15 @@ public class StartAnimationStage extends BaseStage implements ActorLoader {
 
 	private final FlatImage universalImg = new FlatImage("universalImg",
 			TextureAssets
-					.GetTextureRegionFromPacker(TextureAssets.UniversalImg));
+					.GetTextureRegionFromPacker(TextureAssets.MiniImg));
 	private final FlatImage tweenImg = new FlatImage("tweenImg",
-			TextureAssets.GetTextureRegionFromPacker(TextureAssets.TweenImg));
+			TextureAssets.GetTextureRegionFromPacker(TextureAssets.PataImg));
 	private final FlatImage engineImg = new FlatImage("engineImg",
-			TextureAssets.GetTextureRegionFromPacker(TextureAssets.EngineImg));
-	private final FlatImage logoImg = new FlatImage("logoImg",
-			TextureAssets.GetTextureRegionFromPacker(TextureAssets.LogoImg));
+			TextureAssets.GetTextureRegionFromPacker(TextureAssets.PonImg));
 	private final FlatImage stripImg = new FlatImage("stripImg",
 			TextureAssets.GetTextureRegionFromPacker(TextureAssets.StripImg));
+	private final FlatImage logoImg = new FlatImage("logoImg",
+			TextureAssets.GetTextureRegionFromPacker(TextureAssets.LogoImg));
 	private final FlatImage poweredImg = new FlatImage("poweredImg",
 			TextureAssets.GetTextureRegionFromPacker(TextureAssets.PoweredImg));
 	private final FlatImage gdxImg = new FlatImage("gdxImg",
