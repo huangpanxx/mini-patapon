@@ -2,10 +2,8 @@ package game.minipatapon.stage.foreground;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Sound;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
 
 import game.minipatapon.datasource.assets.ResourceLoader;
@@ -28,10 +26,10 @@ public class ForegroundStage extends BaseStage{
 	final float minDistance = 50;
 	private int startX = 0;
 	private int startY = 0;
-	TextureRegion texCourse;
-	TextureRegion texClickDown;
-	TextureRegion texClickNormal;
-	TextureRegion texDrag;
+//	TextureRegion texCourse;
+//	TextureRegion texClickDown;
+//	TextureRegion texClickNormal;
+//	TextureRegion texDrag;
 
 	private Vector2 coursePos = new Vector2(50, 50);
 
@@ -60,11 +58,11 @@ public class ForegroundStage extends BaseStage{
 		particle = ResourceLoader.loadParticle("default.p", "");
 		particle.setPosition(-100, -100);
 		this.slipSound = ResourceLoader.loadSound("slip.ogg");
-		Texture course = ResourceLoader.loadTexture("hand_256_64.png");
-		this.texClickNormal = new TextureRegion(course, 0, 0, 41, 56);
-		this.texClickDown = new TextureRegion(course, 82, 0, 41, 56);
-		this.texDrag = new TextureRegion(course, 126, 0, 41, 56);
-		this.texCourse = this.texClickNormal;
+//		Texture course = ResourceLoader.loadTexture("hand_256_64.png");
+//		this.texClickNormal = new TextureRegion(course, 0, 0, 41, 56);
+//		this.texClickDown = new TextureRegion(course, 82, 0, 41, 56);
+//		this.texDrag = new TextureRegion(course, 126, 0, 41, 56);
+//		this.texCourse = this.texClickNormal;
 		this.clickSound = ResourceLoader.loadSound("click_sound.ogg");
 	}
 
@@ -78,7 +76,7 @@ public class ForegroundStage extends BaseStage{
 		this.particle.setPosition(x * w / width(), h - y * h / height());
 		this.particle.start();
 		this.coursePos.set(screen_x, screen_y);
-		this.texCourse = this.texClickDown;
+//		this.texCourse = this.texClickDown;
 		this.playClickSound();
 		return false;
 	}
@@ -87,7 +85,7 @@ public class ForegroundStage extends BaseStage{
 	public boolean touchUp(int x, int y, int pointer, int button) {
 		this.particle.setPosition(-100, -100);
 		this.particle.start();
-		this.texCourse = this.texClickNormal;
+//		this.texCourse = this.texClickNormal;
 		return false;
 	}
 
@@ -103,7 +101,7 @@ public class ForegroundStage extends BaseStage{
 			this.startX = x;
 			this.startY = y;
 		}
-		this.texCourse = this.texDrag;
+//		this.texCourse = this.texDrag;
 		return false;
 	}
 
@@ -119,8 +117,8 @@ public class ForegroundStage extends BaseStage{
 	public void draw() {
 		float dt = Gdx.graphics.getDeltaTime();
 		spriteBatch.begin();
-		this.spriteBatch.draw(texCourse, this.coursePos.x-2,
-				this.coursePos.y - 36);
+//		this.spriteBatch.draw(texCourse, this.coursePos.x-2,
+//				this.coursePos.y - 36);
 		particle.draw(spriteBatch, dt);
 		spriteBatch.end();
 		this.soundDelta += dt;

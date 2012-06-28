@@ -1,46 +1,289 @@
 package game.minipatapon.datasource.assets;
 
+import game.minipatapon.logger.DefaultLogger;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
 import java.util.Map;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
-
 public class TextureAssets {
-	//public static ArrayList<String> ;
+	// public static ArrayList<String> ;
+
+//	private static Map<String, Texture> m_texMap = new HashMap<String, Texture>();
+//	private static Map<ArrayList<String>, ArrayList<TextureRegion>> m_texregionMap = new HashMap<ArrayList<String>, ArrayList<TextureRegion>>();
+
+	// StatAnimationStage
+	public final static ArrayList<String> MiniImg = new ArrayList<String>() {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		{
+			add("StartAnimation/StartAnimationPack");
+			add("mini");
+		}
+	};
+
+	public final static ArrayList<String> PataImg = new ArrayList<String>() {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		{
+			add("StartAnimation/StartAnimationPack");
+			add("pata");
+		}
+	};
+
+	public final static ArrayList<String> PonImg = new ArrayList<String>() {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		{
+			add("StartAnimation/StartAnimationPack");
+			add("pon");
+		}
+	};
+
+	public final static ArrayList<String> LogoImg = new ArrayList<String>() {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		{
+			add("StartAnimation/StartAnimationPack");
+			add("logo2");
+		}
+	};
+
+	public final static ArrayList<String> StripImg = new ArrayList<String>() {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		{
+			add("StartAnimation/StartAnimationPack");
+			add("white");
+		}
+	};
+
+	public final static ArrayList<String> PoweredImg = new ArrayList<String>() {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		{
+			add("StartAnimation/StartAnimationPack");
+			add("powerdby");
+		}
+	};
+
+	public final static ArrayList<String> GdxImg = new ArrayList<String>() {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		{
+			add("StartAnimation/StartAnimationPack");
+			add("nuclear-Logo");
+		}
+	};
+
+	public final static ArrayList<String> VeilImg = new ArrayList<String>() {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		{
+			add("StartAnimation/StartAnimationPack");
+			add("white");
+		}
+	};
+
+	public final static ArrayList<String> GdxTexImg = new ArrayList<String>() {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		{
+			add("StartAnimation/StartAnimationPack");
+			add("logo");
+		}
+	};
 	
+
+	public final static ArrayList<String> BlackBgImg = new ArrayList<String>() {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		{
+			add("StartAnimation/StartAnimationPack");
+			add("blackBg");
+		}
+	};
+
 //	private static Map<String , Texture> m_texMap = new HashMap<String, Texture>();
 //	private static Map<ArrayList<String>, ArrayList<TextureRegion>> m_texregionMap = new HashMap<ArrayList<String>, ArrayList<TextureRegion>>(); 
+
 	
-	public final static ArrayList<String>  StandardBearer_right_Img = 
-			new ArrayList<String>(){{ add("MainMenuPack");add( "standard-bearer-right-1" );add( "standard-bearer-right-2" );}};
-	public final static ArrayList<String>  ShieldSoldier_right_Img=
-			new ArrayList<String>(){{ add("MainMenuPack");add( "ShieldSoldier-1" );add( "ShieldSoldier-2" );}};
-	public final static ArrayList<String>  Swordman_right_Img =
-			new ArrayList<String>(){{ add("MainMenuPack");add( "swordman-1" );add( "swordman-2" );}};
-	public final static ArrayList<String>  Swordman2_right_Img=
-			new ArrayList<String>(){{ add("MainMenuPack");add( "swordman2-1" );add( "swordman2-2" );}};
-	public final static ArrayList<String>  StandardBearer_left_Img=
-			new ArrayList<String>(){{ add("MainMenuPack");add( "standard-bearer-left-1" );add( "standard-bearer-left-2" );}};
-	public final static ArrayList<String>  Archer_left_Img=
-			new ArrayList<String>(){{ add("MainMenuPack");add( "Archer-1" );add( "Archer-2" );}};
-	public final static ArrayList<String>  ShieldSoldier_left_Img=
-			new ArrayList<String>(){{ add("MainMenuPack");add( "ShieldSoldier2-1" );add( "ShieldSoldier2-2" );}};
-	public final static ArrayList<String>  ShieldSoldier3_left_Img=
-			new ArrayList<String>(){{ add("MainMenuPack");add( "ShieldSoldier3-1" );add( "ShieldSoldier3-2" );}};
-	public final static ArrayList<String>  GameName1Img=
-			new ArrayList<String>(){{ add("MainMenuPack");add( "GameName1" );}};
-	public final static ArrayList<String>  GameName2Img=
-			new ArrayList<String>(){{ add("MainMenuPack");add( "GameName2" );}};
+	// MainMenuStage
+	public final static ArrayList<String> StandardBearer_right_Img = new ArrayList<String>() {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		{
+			add("MainMenuPack");
+			add("flagman1");
+			add("flagman2");
+		}
+	};
+	public final static ArrayList<String> ShieldSoldier_right_Img = new ArrayList<String>() {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		{
+			add("MainMenuPack");
+			add("shieldSoldiers");
+			add("shieldSoldiers2");
+		}
+	};
+	public final static ArrayList<String> Swordman_right_Img = new ArrayList<String>() {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		{
+			add("MainMenuPack");
+			add("swordsman1");
+			add("swordsman2");
+		}
+	};
+	public final static ArrayList<String> Swordman2_right_Img = new ArrayList<String>() {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		{
+			add("MainMenuPack");
+			add("holdKnife2");
+			add("holdKnife1");
+		}
+	};
+	public final static ArrayList<String> StandardBearer_left_Img = new ArrayList<String>() {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		{
+			add("MainMenuPack");
+			add("holdFlag1");
+			add("holdFlag2");
+			add("holdFlag3");
+			add("holdFlag4");
+		}
+	};
+	public final static ArrayList<String> Archer_left_Img = new ArrayList<String>() {
+		private static final long serialVersionUID = 1L;
+
+		{
+			add("MainMenuPack");
+			add("archer1");
+			add("archer2");
+		}
+	};
+	public final static ArrayList<String> ShieldSoldier_left_Img = new ArrayList<String>() {
+		private static final long serialVersionUID = 5626720953104329290L;
+
+		{
+			add("MainMenuPack");
+			add("shieldSoldier1");
+			add("shieldSoldier2");
+		}
+	};
+	public final static ArrayList<String> ShieldSoldier3_left_Img = new ArrayList<String>() {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		{
+			add("MainMenuPack");
+			add("Yaripon");
+			add("Yaripon1");
+			add("Yaripon2");
+			add("Yaripon4");
+		}
+	};
 	
-	public final static String Altar_Img =  "altar.png" ;
 	
+	//LevelStage
+	public final static String BackgroundImg = "background.png";
+	
+	
+	public final static ArrayList<String> GameName1Img = new ArrayList<String>() {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		{
+			add("MainMenuPack");
+			add("GameName1");
+		}
+	};
+	public final static ArrayList<String> GameName2Img = new ArrayList<String>() {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		{
+			add("MainMenuPack");
+			add("GameName2");
+		}
+	};
+	public final static String Altar_Img = "altar.png";
+
+	// HelpStage
+	public final static String AboutUsImage = "about us.png";
+	public final static String QuitImage = "quitbutton.png";
+
+
+
+	public static ArrayList<TextureRegion> GetTextureRegionsFromPacker(
+			ArrayList<String> str) {
+//		while (!m_texregionMap.containsKey(str)) {
+//			LoadTextureRegion(str);
+//		}
+		return ResourceLoader.loadTextureRegionFromPacker(str);
+	}
+
+	
+
 	public static  Texture GetTex(String texStr)
 	{
 		//MusicAssets.GetMusic(MusicAssets.exampleMusicStr);
@@ -52,14 +295,18 @@ public class TextureAssets {
 		return ResourceLoader.loadTexture(texStr);
 	}
 	
-	public static ArrayList<TextureRegion> GetTextureRegionFromPacker(ArrayList<String> str)
+
+	
+	public static TextureRegion GetTextureRegionFromPacker(ArrayList<String> str)
 	{
-	//	while(!m_texregionMap.containsKey(str))
-	//	{
-	//		LoadTextureRegion(str);
-	//	}
-	//	return m_texregionMap.get(str);
-		return ResourceLoader.loadTextureRegionFromPacker(str);
+		DefaultLogger.getDefaultLogger().logWithSignature(TextureAssets.class, "资源未加载：%s", str.toString());
+		if( GetTextureRegionsFromPacker(str).size() <=0 )
+		{
+			DefaultLogger.getDefaultLogger().logWithSignature(TextureAssets.class, "资源未加载：%s", str.toString());
+			return null;
+		}
+
+		return GetTextureRegionsFromPacker(str).get(0) ;
 	}
 	
 	public static void LoadTextureRegion(ArrayList<String> str)
@@ -72,15 +319,20 @@ public class TextureAssets {
 	{
 		Texture temp=ResourceLoader.loadTexture(texStr);
 	//	m_texMap.put(texStr, temp);
+
 	}
-	
-	public static void LoadTexture(ArrayList<String> texStrs)
-	{
-		
+
+	public static void LoadTexture(ArrayList<String> texStrs) {
+
 		for (String texStr : texStrs) {
+
+//			Texture temp = ResourceLoader.loadTexture(texStr);
+//			m_texMap.put(texStr, temp);
+
 			Texture temp=ResourceLoader.loadTexture(texStr);
 //			m_texMap.put(texStr, temp);
+
 		}
-		
+
 	}
 }
