@@ -10,5 +10,5 @@ public abstract class EventArg {
 
 	}
 
-
+	public abstract void EventArgSent();
 }

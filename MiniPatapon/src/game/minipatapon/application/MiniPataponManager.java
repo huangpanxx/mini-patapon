@@ -1,23 +1,22 @@
 package game.minipatapon.application;
-/** 
- * @description	: Game Manager, Singleton mode
- * @author		: 黄攀
- * @created		: 2012-1-2
- */
 
 
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL10;
+
+
 import game.minipatapon.localization.Language;
 import game.minipatapon.logger.DefaultLogger;
 import game.minipatapon.logger.Loggable;
 import game.minipatapon.screen.LayeredScreen;
-import game.minipatapon.screen.ProcessableScreen;
 
 
-public class MiniPataponManager implements ApplicationListener, ScreenManageable {
+
+
+
+public class MiniPataponManager implements ApplicationListener, ScreenManageable{
 
 	public int appWidth = 0;
 	public int appHeight = 0;
@@ -25,7 +24,7 @@ public class MiniPataponManager implements ApplicationListener, ScreenManageable
 	// The only instance
 	private static MiniPataponManager instance = null;
 
-	private ProcessableScreen screen = null;
+	private LayeredScreen screen = null;
 
 	public static MiniPataponManager getInstance() {
 		
@@ -35,6 +34,10 @@ public class MiniPataponManager implements ApplicationListener, ScreenManageable
 	}
 
 	Loggable logger;
+	public LayeredScreen getLayeredScreen()
+	{
+		return screen;
+	}
 
 	// Private constructor
 	private MiniPataponManager() {
@@ -42,6 +45,7 @@ public class MiniPataponManager implements ApplicationListener, ScreenManageable
 		logger = DefaultLogger.getDefaultLogger();
 		logger.logWithSignature(this, "语言测试:%1$s",
 				Language.translate("MiniPatapon"));
+		init();
 	}
 
 	@Override
@@ -49,7 +53,10 @@ public class MiniPataponManager implements ApplicationListener, ScreenManageable
 		logger.logWithSignature(this, "create");
 		//MusicManager.setBackgroundMusic("background.ogg");
 		//MusicManager.play(true);
-		this.navigate(new LayeredScreen(this));
+		this.navigate(screen);
+	}
+	private void init(){
+		screen = new LayeredScreen();
 	}
 
 	@Override
@@ -93,7 +100,7 @@ public class MiniPataponManager implements ApplicationListener, ScreenManageable
 	}
 
 	@Override
-	public void navigate(ProcessableScreen screen) {
+	public void navigate(LayeredScreen screen) {
 		logger.logWithSignature(this, "navigate(%1$s)", screen
 				.getClass().getSimpleName());
 		this.screen = screen;
@@ -101,5 +108,7 @@ public class MiniPataponManager implements ApplicationListener, ScreenManageable
 		if (screen != null)
 			screen.show();
 	}
+
+	
 
 }

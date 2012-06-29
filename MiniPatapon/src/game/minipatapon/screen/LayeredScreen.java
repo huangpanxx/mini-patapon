@@ -6,6 +6,11 @@
 
 package game.minipatapon.screen;
 
+import game.minipatapon.event.EventBase;
+import game.minipatapon.event.EventListener;
+import game.minipatapon.event.NavLayeredScreenStageArg;
+import game.minipatapon.stage.base.BaseStage;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -13,16 +18,16 @@ import java.util.Iterator;
 import java.util.List;
 
 import com.badlogic.gdx.InputMultiplexer;
-import game.minipatapon.application.ScreenManageable;
+//import game.minipatapon.application.ScreenManageable;
 
-public class LayeredScreen extends SimpleScreen implements ProcessableScreen {
+public class LayeredScreen extends SimpleScreen implements ProcessableScreen, EventListener<NavLayeredScreenStageArg>{
 
-	ScreenManageable manager;
-	List<NavigateScreen> screens;
+	//ScreenManageable manager;
+	public List<NavigateScreen> screens;
 	InputMultiplexer processPlexer;
 
-	public LayeredScreen(ScreenManageable _manager) {
-		this.manager = _manager;
+	public LayeredScreen() {
+	//	this.manager = _manager;
 		this.processPlexer = new InputMultiplexer();
 		screens = new ArrayList<NavigateScreen>();
 		loadScreens();
@@ -152,5 +157,23 @@ public class LayeredScreen extends SimpleScreen implements ProcessableScreen {
 			screen.show();
 		}
 	}
-
+	@Override
+	public <X extends EventBase<NavLayeredScreenStageArg>> void onEventReceived(
+			X source, NavLayeredScreenStageArg arg) {
+		// TODO Auto-generated method stub
+		for (NavigateScreen layerScreen : this.screens) {
+			if(layerScreen.getLayer()==arg.m_screenLayer)
+			{
+				try {
+					BaseStage desStage =(BaseStage)arg.m_class.getConstructors()[0].newInstance(null);
+					layerScreen.navigate(desStage);
+				} catch (Exception e) {
+				//	logger.log(0, " destination stage", e.toString());
+					// TODO: handle exception
+				}
+				
+			}
+		}
+		
+	}
 }

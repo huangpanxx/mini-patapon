@@ -6,9 +6,10 @@
 
 package game.minipatapon.application;
 
+import game.minipatapon.screen.LayeredScreen;
 import game.minipatapon.screen.ProcessableScreen;
 
 public interface ScreenManageable {
 
-	void navigate(ProcessableScreen screen);
+	void navigate(LayeredScreen screen);
 }
