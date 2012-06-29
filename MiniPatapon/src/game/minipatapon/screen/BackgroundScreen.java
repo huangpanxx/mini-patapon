@@ -1,8 +1,6 @@
 package game.minipatapon.screen;
 
 import game.minipatapon.stage.background.BackgroundStage;
-import game.minipatapon.stage.midground.TestSpriterImport;
-
 public class BackgroundScreen extends NavigateScreen {
 	public BackgroundScreen() {
 		this.setLayer(ScreenLayer.BACKGROUDN);
