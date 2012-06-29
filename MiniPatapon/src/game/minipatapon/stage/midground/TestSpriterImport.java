@@ -11,6 +11,10 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 
+<<<<<<< HEAD
+//import game.minipatapon.effectpresent.spriter.BaseSpriterDrawer;
+=======
+>>>>>>> origin/master
 import game.minipatapon.effectpresent.spriter.SpriterObject;
 import game.minipatapon.effectpresent.spriter.TextureProvider;
 import game.minipatapon.effectpresent.spriter.util.ScaleSpriterDrawer;
