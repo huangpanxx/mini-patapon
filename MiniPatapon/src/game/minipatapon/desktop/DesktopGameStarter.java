@@ -34,11 +34,7 @@ public class DesktopGameStarter {
 		try {
 			// 获得管理�?
 			MiniPataponManager manager = MiniPataponManager.getInstance();
-			
-			manager.appWidth = 480;
-			manager.appHeight = 320;
-			
-			
+
 			// 启动管理�?
 			new JoglApplication(manager, "MiniPatapon", 1152, 552, true);
 		} catch (Exception e) {
