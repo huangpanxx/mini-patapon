@@ -273,6 +273,8 @@ public class TextureAssets {
 	public final static String QuitImage = "quitbutton.png";
 
 
+	// Dialog
+	public final static String DialogBg = "dialogBg.png";
 
 	public static ArrayList<TextureRegion> GetTextureRegionsFromPacker(
 			ArrayList<String> str) {
