@@ -54,6 +54,7 @@ public class MiniPataponManager implements ApplicationListener, ScreenManageable
 	}
 	private void init(){
 		screen = new LayeredScreen();
+		logger.log(0, "layer screen load", "correact");
 	}
 
 	@Override

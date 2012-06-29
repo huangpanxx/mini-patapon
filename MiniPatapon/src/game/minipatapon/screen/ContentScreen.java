@@ -17,8 +17,13 @@ public class ContentScreen extends NavigateScreen {
 
 	public ContentScreen() {
 		this.setLayer(ScreenLayer.CONTENT);
+		init();
 	}
-
+  
+	public void init(){
+		this.stage= new ChooseLevelStage(this, getWidth(), getHeight(), true);
+	}
+	
 	@Override
 	public void show() {
 		super.show();
@@ -26,6 +31,7 @@ public class ContentScreen extends NavigateScreen {
 //		this.navigate(new MainMenuStage(this, getWidth(), getHeight(), true));
 //		this.navigate(new ChooseLevelStage(this, getWidth(), getHeight(), true));
 //		this.navigate(new StartAnimationStage(this, getWidth(), getHeight(), true));
-		this.navigate(new TestSpriterImport(this, getWidth(), getHeight(), true));
+	//	this.navigate(new TestSpriterImport(this, getWidth(), getHeight(), true));
+		this.navigate(stage);
 	}
 }

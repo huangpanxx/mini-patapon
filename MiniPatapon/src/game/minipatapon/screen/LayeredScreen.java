@@ -9,6 +9,8 @@ package game.minipatapon.screen;
 import game.minipatapon.event.EventBase;
 import game.minipatapon.event.EventListener;
 import game.minipatapon.event.NavLayeredScreenStageArg;
+import game.minipatapon.logger.DefaultLogger;
+import game.minipatapon.logger.Loggable;
 import game.minipatapon.stage.base.BaseStage;
 
 import java.util.ArrayList;
@@ -26,17 +28,26 @@ public class LayeredScreen extends SimpleScreen implements ProcessableScreen, Ev
 	public List<NavigateScreen> screens;
 	InputMultiplexer processPlexer;
 
+	private Loggable logger;
+
 	public LayeredScreen() {
 	//	this.manager = _manager;
 		this.processPlexer = new InputMultiplexer();
 		screens = new ArrayList<NavigateScreen>();
+		
+		logger =  DefaultLogger.getDefaultLogger();
+		logger.log(0, " layer screen logger", "success");
 		loadScreens();
+		
 	}
 
 	private void loadScreens() {
 		this.addScreen(new ForegroundScreen());
+		logger.log(0, " ForegroundScreen screen logger", "success");
 		this.addScreen(new ContentScreen());
+		logger.log(0, " ContentScreen logger", "success");
 		this.addScreen(new BackgroundScreen());
+		logger.log(0, " BackgroundScreen logger", "success");
 	}
 
 	public void addScreen(NavigateScreen screen) {
@@ -165,7 +176,7 @@ public class LayeredScreen extends SimpleScreen implements ProcessableScreen, Ev
 			if(layerScreen.getLayer()==arg.m_screenLayer)
 			{
 				try {
-					BaseStage desStage =(BaseStage)arg.m_class.getConstructors()[0].newInstance(null);
+					BaseStage desStage =(BaseStage)arg.m_class.getConstructors()[0].newInstance(layerScreen,getWidth(),getHeight(),true);
 					layerScreen.navigate(desStage);
 				} catch (Exception e) {
 				//	logger.log(0, " destination stage", e.toString());

@@ -11,9 +11,10 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 
-import game.minipatapon.effectpresent.spriter.BaseSpriterDrawer;
+//import game.minipatapon.effectpresent.spriter.BaseSpriterDrawer;
 import game.minipatapon.effectpresent.spriter.SpriterObject;
 import game.minipatapon.effectpresent.spriter.TextureProvider;
+import game.minipatapon.effectpresent.spriter.util.ScaleSpriterDrawer;
 import game.minipatapon.effectpresent.spriter.util.SpriterDrawer;
 import game.minipatapon.effectpresent.spriter.util.SpriterImporter;
 import game.minipatapon.screen.ContentScreen;
@@ -108,13 +109,13 @@ public class TestSpriterImport extends BaseStage implements ActorLoader, Texture
 //		BaseSpriterDrawer.draw(0.5f, 0.5f, camera, batch, spriterObjectHero, "walk", timeElapsed * 100, 0, 0, true,
 //		        true);
 		
-		BaseSpriterDrawer.draw(0.2f, 0.2f, camera, batch, spriterObjectHero, "walk", timeElapsed * 100,
+		ScaleSpriterDrawer.draw(0.2f, 0.2f, this, batch, spriterObjectHero, "walk", timeElapsed * 100,
 		        150 + (timeElapsed * 120 % 250), 50, true, true);
 		
-		BaseSpriterDrawer.draw(0.3f, 0.3f, camera, batch, spriterObjectHero, "walk", timeElapsed * 100,
+		ScaleSpriterDrawer.draw(0.3f, 0.3f, this, batch, spriterObjectHero, "walk", timeElapsed * 100,
 		        150 + (timeElapsed * 120 % 250), 50, true, true);
 		
-		BaseSpriterDrawer.draw(0.5f, 0.5f, camera, batch, spriterObjectHero, "walk", timeElapsed * 100,
+		ScaleSpriterDrawer.draw(0.5f, 0.5f, this, batch, spriterObjectHero, "walk", timeElapsed * 100,
 		        150 + (timeElapsed * 120 % 250), 50, true, true);
 		
 		
