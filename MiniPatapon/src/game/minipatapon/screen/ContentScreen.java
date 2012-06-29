@@ -19,16 +19,14 @@ public class ContentScreen extends NavigateScreen {
 
 	public ContentScreen() {
 		this.setLayer(ScreenLayer.CONTENT);
-<<<<<<< HEAD
+
 		init();
-=======
-		
+
 		DefaultLogger.getDefaultLogger().logWithSignature(this, "enter ContentScreen");
->>>>>>> origin/master
 	}
   
 	public void init(){
-		this.stage= new ChooseLevelStage(this, getWidth(), getHeight(), true);
+		this.stage= new StartAnimationStage(this, getWidth(), getHeight(), true);
 	}
 	
 	@Override
@@ -39,14 +37,14 @@ public class ContentScreen extends NavigateScreen {
 //		this.navigate(new StartMenuStage(this, getWidth(), getHeight(), true));
 //		this.navigate(new MainMenuStage(this, getWidth(), getHeight(), true));
 //		this.navigate(new ChooseLevelStage(this, getWidth(), getHeight(), true));
-<<<<<<< HEAD
+
 //		this.navigate(new StartAnimationStage(this, getWidth(), getHeight(), true));
 	//	this.navigate(new TestSpriterImport(this, getWidth(), getHeight(), true));
 		this.navigate(stage);
-=======
-		this.navigate(new StartAnimationStage(this, getWidth(), getHeight(), true));
+
+	//	this.navigate(new StartAnimationStage(this, getWidth(), getHeight(), true));
 //		this.navigate(new TestSpriterImport(this, getWidth(), getHeight(), true));
 //		this.navigate(new LvelOneStage(this, getWidth(), getHeight(), true));
->>>>>>> origin/master
+
 	}
 }
