@@ -1,5 +1,7 @@
 package game.minipatapon.util;
 
+import game.minipatapon.application.ApplicationService;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

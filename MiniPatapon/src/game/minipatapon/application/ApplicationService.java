@@ -3,7 +3,7 @@ package game.minipatapon.application;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
-import game.minipatapon..event.EventAggregator;
+import game.minipatapon.event.EventAggregator;
 
 import game.minipatapon.logger.DefaultLogger;
 

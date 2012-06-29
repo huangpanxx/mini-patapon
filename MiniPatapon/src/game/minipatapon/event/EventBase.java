@@ -13,11 +13,11 @@ public class EventBase<T extends EventArg> {
 	
 	private List<EventListener<T>> listeners;
    
-	public T arg = null;
+	//public T arg = null;
 	
-	public void EventArgRec(T _arg)
+	public void EventArgRec(T arg)
 	{
-		arg=_arg;
+		
 		publish(arg);
 	}
 		

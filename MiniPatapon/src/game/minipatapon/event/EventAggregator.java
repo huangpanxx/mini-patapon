@@ -31,7 +31,7 @@ public class EventAggregator {
 			if (!this.dictionary.containsKey(cls)) {
 				this.dictionary.put(cls,
 						(EventBase<?>) cls.getConstructors()[0]
-								.newInstance(this));
+								.newInstance());
 			}
 
 			@SuppressWarnings("unchecked")

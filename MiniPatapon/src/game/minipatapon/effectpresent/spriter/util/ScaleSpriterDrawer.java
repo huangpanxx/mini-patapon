@@ -1,19 +1,21 @@
-package game.minipatapon.effectpresent.spriter;
+package game.minipatapon.effectpresent.spriter.util;
 
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector3;
+import com.badlogic.gdx.scenes.scene2d.Stage;
 
+import game.minipatapon.effectpresent.spriter.SpriterObject;
 import game.minipatapon.effectpresent.spriter.util.SpriterDrawer;
 
-public class BaseSpriterDrawer extends SpriterDrawer {
+public class ScaleSpriterDrawer extends SpriterDrawer {
 
-	public static void draw(float scaleX, float scaleY, Camera originCamera,
+	public static void draw(float scaleX, float scaleY, Stage stage,
 			SpriteBatch spriteBatch, SpriterObject spriterObject,
 			String animationName, float keyTime, float offsetX, float offsetY,
 			boolean repeatAnimation, boolean doTweening) {
-
+        Camera originCamera = stage.getCamera();
 		OrthographicCamera camera = new OrthographicCamera(1 / scaleX
 				* originCamera.viewportWidth, 1 / scaleY
 				* originCamera.viewportHeight);
