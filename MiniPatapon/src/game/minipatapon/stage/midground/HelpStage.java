@@ -2,11 +2,11 @@ package game.minipatapon.stage.midground;
 
 import game.minipatapon.datasource.assets.ResourceLoader;
 import game.minipatapon.effectpresent.actor.FlatImage;
+import game.minipatapon.effectpresent.actor.Image;
 import game.minipatapon.screen.ContentScreen;
 import game.minipatapon.stage.base.BaseStage;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.scenes.scene2d.actors.Image;
 
 
 /**

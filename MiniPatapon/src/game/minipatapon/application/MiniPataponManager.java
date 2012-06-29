@@ -19,6 +19,9 @@ import game.minipatapon.screen.ProcessableScreen;
 
 public class MiniPataponManager implements ApplicationListener, ScreenManageable {
 
+	public int appWidth = 0;
+	public int appHeight = 0;
+	
 	// The only instance
 	private static MiniPataponManager instance = null;
 

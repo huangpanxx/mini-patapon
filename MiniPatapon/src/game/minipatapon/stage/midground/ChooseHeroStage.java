@@ -10,7 +10,6 @@ import game.minipatapon.stage.base.BaseStage;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.Actor;
-import com.badlogic.gdx.scenes.scene2d.actors.Image;
 
 public class ChooseHeroStage extends BaseStage implements ActorLoader{
 	@SuppressWarnings("unused")
@@ -42,14 +41,14 @@ public class ChooseHeroStage extends BaseStage implements ActorLoader{
 		float height = this.height;
 		
 		Texture level1 = ResourceLoader.loadTexture("hero/hero1/lowlight_up.png");
-		Image level1Image = new FlatImage("level1", level1, 0f, height/2 - level1.getHeight()/2, null);
+		FlatImage level1Image = new FlatImage("level1", level1, 0f, height/2 - level1.getHeight()/2, null);
 
 		
 		Texture level2 = ResourceLoader.loadTexture("hero/hero2/lowlight_up.png");
-		Image level2Image = new FlatImage("level2", level2, 100f, height/2 - level2.getHeight()/2, null);
+		FlatImage level2Image = new FlatImage("level2", level2, 100f, height/2 - level2.getHeight()/2, null);
 		
 		Texture level3 = ResourceLoader.loadTexture("hero/hero3/lowlight_up.png");
-		Image level3Image = new FlatImage("level3", level3, 200f, height/2 - level3.getHeight()/2, null);
+		FlatImage level3Image = new FlatImage("level3", level3, 200f, height/2 - level3.getHeight()/2, null);
 		
 
 		

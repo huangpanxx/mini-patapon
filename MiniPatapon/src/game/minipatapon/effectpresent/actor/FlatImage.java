@@ -10,8 +10,8 @@ import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.OnActionCompleted;
 import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.actions.RotateTo;
-import com.badlogic.gdx.scenes.scene2d.actors.Image;
+
+import game.minipatapon.effectpresent.action.RotateTo;
 import game.minipatapon.logger.DefaultLogger;
 
 public class FlatImage extends Image implements
@@ -109,6 +109,8 @@ public class FlatImage extends Image implements
 	
 	public FlatImage(String name, TextureRegion region) {
 		super(name, region);
+		
+		DefaultLogger.getDefaultLogger().logWithSignature(this, "enter FlatImage");
 	}
 
 
