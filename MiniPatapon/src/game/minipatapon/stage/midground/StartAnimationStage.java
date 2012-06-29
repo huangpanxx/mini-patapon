@@ -14,6 +14,7 @@ import aurelienribon.tweenengine.equations.Quint;
 import game.minipatapon.datasource.assets.TextureAssets;
 import game.minipatapon.effectpresent.action.ActorAccessor;
 import game.minipatapon.effectpresent.actor.FlatImage;
+import game.minipatapon.logger.DefaultLogger;
 import game.minipatapon.screen.ContentScreen;
 import game.minipatapon.stage.base.BaseStage;
 
@@ -23,7 +24,7 @@ public class StartAnimationStage extends BaseStage implements ActorLoader {
 	@SuppressWarnings("unused")
 	private ContentScreen contentScreen = null;
 
-	private final TweenManager tweenManager = new TweenManager();
+	
 
 	private final FlatImage universalImg = new FlatImage("universalImg",
 			TextureAssets
@@ -46,6 +47,8 @@ public class StartAnimationStage extends BaseStage implements ActorLoader {
 			TextureAssets.GetTextureRegionFromPacker(TextureAssets.GdxTexImg));
 	private final FlatImage blackBgImg = new FlatImage("blackBgImg",
 			TextureAssets.GetTextureRegionFromPacker(TextureAssets.BlackBgImg));
+	
+	private final TweenManager tweenManager = new TweenManager();
 
 	public StartAnimationStage(ContentScreen screen, float width, float height,
 			boolean stretch) {
@@ -66,6 +69,10 @@ public class StartAnimationStage extends BaseStage implements ActorLoader {
 	@Override
 	public void init() {
 		// TODO Auto-generated method stub
+		
+		DefaultLogger.getDefaultLogger().logWithSignature(this, "graphics-size: %d, %d", Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		DefaultLogger.getDefaultLogger().logWithSignature(this, "stage-size: %f, %f", this.width, this.height);
+		DefaultLogger.getDefaultLogger().logWithSignature(this, "camera-size: %f, %f", camera.viewportWidth, camera.viewportHeight);
 
 
 		Tween.registerAccessor(FlatImage.class, new ActorAccessor());

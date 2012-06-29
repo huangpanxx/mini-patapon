@@ -34,8 +34,9 @@ public class DesktopGameStarter {
 		try {
 			// 获得管理�?
 			MiniPataponManager manager = MiniPataponManager.getInstance();
+
 			// 启动管理�?
-			new JoglApplication(manager, "MiniPatapon", 480, 320, true);
+			new JoglApplication(manager, "MiniPatapon", 1152, 552, true);
 		} catch (Exception e) {
 			logger.logWithSignature("DesktopStarter", 1, "程序运行出错:%1$s",
 					e.getMessage());

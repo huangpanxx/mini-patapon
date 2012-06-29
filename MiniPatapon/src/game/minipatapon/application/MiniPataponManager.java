@@ -18,6 +18,7 @@ import game.minipatapon.screen.LayeredScreen;
 
 public class MiniPataponManager implements ApplicationListener, ScreenManageable{
 
+	
 	// The only instance
 	private static MiniPataponManager instance = null;
 

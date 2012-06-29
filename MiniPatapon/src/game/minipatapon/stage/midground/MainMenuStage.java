@@ -3,6 +3,7 @@ package game.minipatapon.stage.midground;
 
 import game.minipatapon.datasource.assets.TextureAssets;
 import game.minipatapon.effectpresent.actor.FlatImage;
+import game.minipatapon.effectpresent.actor.Image;
 import game.minipatapon.effectpresent.animation.AnimateImage;
 import game.minipatapon.screen.ContentScreen;
 import game.minipatapon.stage.base.BaseStage;
@@ -15,7 +16,6 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.actions.MoveTo;
 import com.badlogic.gdx.scenes.scene2d.actions.ScaleTo;
-import com.badlogic.gdx.scenes.scene2d.actors.Image;
 
 public class MainMenuStage extends BaseStage implements ActorLoader {
 

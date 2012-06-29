@@ -273,6 +273,8 @@ public class TextureAssets {
 	public final static String QuitImage = "quitbutton.png";
 
 
+	// Dialog
+	public final static String DialogBg = "dialogBg.png";
 
 	public static ArrayList<TextureRegion> GetTextureRegionsFromPacker(
 			ArrayList<String> str) {
@@ -299,7 +301,7 @@ public class TextureAssets {
 	
 	public static TextureRegion GetTextureRegionFromPacker(ArrayList<String> str)
 	{
-		DefaultLogger.getDefaultLogger().logWithSignature(TextureAssets.class, "资源未加载：%s", str.toString());
+//		DefaultLogger.getDefaultLogger().logWithSignature(TextureAssets.class, "加载资源： %s", str.toString());
 		if( GetTextureRegionsFromPacker(str).size() <=0 )
 		{
 			DefaultLogger.getDefaultLogger().logWithSignature(TextureAssets.class, "资源未加载：%s", str.toString());

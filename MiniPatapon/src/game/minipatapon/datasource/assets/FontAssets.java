@@ -1,5 +1,7 @@
 package game.minipatapon.datasource.assets;
 
-public class FontAssets {
+import com.badlogic.gdx.assets.loaders.AssetLoader;
 
+public class FontAssets {
+	AssetLoader a;
 }

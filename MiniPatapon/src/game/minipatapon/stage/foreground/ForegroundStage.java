@@ -44,12 +44,12 @@ public class ForegroundStage extends BaseStage{
 
 	private void playSlipSound() {
 		if (this.soundDelta > this.minSoundDelta) {
-//			this.slipSound.play();
+			//this.slipSound.play();
 			this.soundDelta = 0;
 		}
 	}
 	private void playClickSound(){
-		this.clickSound.play();
+		//this.clickSound.play();
 	}
 
 	private void initialize() {
