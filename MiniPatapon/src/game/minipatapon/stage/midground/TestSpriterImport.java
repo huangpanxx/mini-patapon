@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
@@ -25,7 +26,7 @@ public class TestSpriterImport extends BaseStage implements ActorLoader, Texture
 	private ContentScreen contentScreen;
 	private SpriterObject spriterObjectHero;
 	private float timeElapsed = 0;
-	
+	private int tes;
 	private final Map<String, Texture> textures = new HashMap<String, Texture>();
 	
 	public TestSpriterImport(ContentScreen screen, float width, float height,
