@@ -13,6 +13,7 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import game.minipatapon.logger.DefaultLogger;
 import game.minipatapon.logger.Loggable;
 import game.minipatapon.stage.base.BaseStage;
+//import game.minipatapon.stage.Base.BaseStage;
 
 public class NavigateScreen extends SimpleScreen implements ProcessableScreen,
 		Layerable {
@@ -30,11 +31,9 @@ public class NavigateScreen extends SimpleScreen implements ProcessableScreen,
 
 	private void initialize(int layer) {
 		logger = DefaultLogger.getDefaultLogger();
-		 camera = new OrthographicCamera(getWidth(), getHeight());
-		//camera = new OrthographicCamera(480, 320);
-		
-		camera.position.set(camera.viewportWidth / 2,
-				camera.viewportHeight / 2, 0);
+		// camera = new OrthographicCamera(getWidth(), getHeight());
+		camera = new OrthographicCamera(480, 320);
+		camera.position.set(240, 160, 0);
 		this.layer = ScreenLayer.CONTENT;
 	}
 
